@@ -1,7 +1,6 @@
 /* Mobile first design  */
 
 h1 {
-  color: red;
   margin: auto;
 }
 
@@ -26,6 +25,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .collapsible .header {
+  align-items: center;
   border-bottom: 2px solid aqua;
   padding: 6px 0 6px 12px;
   cursor: pointer;
@@ -43,16 +43,12 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
 }
 
-.title {
-  border: 2px solid red;
-}
-
 .icon {
   color: aqua;
 }
 
 .text {
-  font-size: 46px;
+  font-size: 32px;
 }
 
 @media (min-width: 500px) {
