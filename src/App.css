@@ -1,0 +1,68 @@
+/* Mobile first design  */
+
+h1 {
+  color: red;
+  margin: auto;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.company-collapase {
+  padding-left: 12px;
+}
+
+.container {
+  margin: auto;
+  position: relative;
+  height: 100px;
+  width: 70%;
+}
+
+.collapsible .content {
+  padding: 6px 0 6px 18px;
+}
+
+.collapsible .header {
+  border-bottom: 2px solid aqua;
+  padding: 6px 0 6px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plus-image {
+  width: 50px;
+  height: 50px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  border: 2px solid red;
+}
+
+.icon {
+  color: aqua;
+}
+
+.text {
+  font-size: 46px;
+}
+
+@media (min-width: 500px) {
+  .text {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 748px) {
+  .text {
+    font-size: 20px;
+  }
+}
