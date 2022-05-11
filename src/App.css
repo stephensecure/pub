@@ -15,9 +15,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .container {
   margin: auto;
-  position: relative;
-  height: 100px;
-  width: 70%;
+  padding-right: 10px;
 }
 
 .collapsible .content {
@@ -48,16 +46,23 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .text {
-  font-size: 32px;
+  font-size: 26px;
+  padding-right: 20px;
 }
 
-@media (min-width: 500px) {
-  .text {
-    font-size: 26px;
+.header + div {
+  border: 1px solid white;
+}
+
+.custom-answer {
+  border-bottom: 2px solid aqua;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
   }
-}
 
-@media (min-width: 748px) {
   .text {
     font-size: 20px;
   }

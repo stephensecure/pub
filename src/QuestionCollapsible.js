@@ -4,16 +4,12 @@ import './App.css';
 
 const QuestionCollapsible = ({ question, answer }) => {
 
-  let n = 29;
-  question = question.slice(n);
-  var newQuestion = question.slice(0, -11);
-
   const config = {
     duration: 1000,
     defaultExpanded: true
   };
 
-  const { getCollapseProps= 'false', getToggleProps='false', isExpanded='false' } = useCollapse(config);
+  const { getCollapseProps = 'false', getToggleProps = 'false', isExpanded = 'false' } = useCollapse(config);
 
   const RightIcon = () => {
 
@@ -33,16 +29,34 @@ const QuestionCollapsible = ({ question, answer }) => {
     }
   }
 
+  const QuestionComponent = () => {
+
+    return (
+      <>
+        <div className="custom-container" dangerouslySetInnerHTML={{ __html: question }}></div>
+      </>
+    )
+  }
+
+  const AnswerComponent = () => {
+
+    return (
+      <>
+        <div className="custom-answer" dangerouslySetInnerHTML={{ __html: answer }}></div>
+      </>
+    )
+  }
+
   return (
     <div>
       <div className="collapsible">
         <div className="header" {...getToggleProps()}>
-          <p className="text"> {newQuestion} </p>
+          <QuestionComponent />
           <RightIcon />
         </div>
         <div {...getCollapseProps()}>
           <div className="content">
-           <p className="text"> {answer}</p>
+            <AnswerComponent />
           </div>
         </div>
       </div>
